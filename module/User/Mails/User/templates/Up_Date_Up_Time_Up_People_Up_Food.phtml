@@ -1,0 +1,332 @@
+  <tr>
+    <td><br>
+      <p style="font-size: 16px;">
+        Hey <?php echo $this->invitee;?>,<br><br>
+      </p>
+      <p>
+        <?php echo $this->userName; ?>&#39;s pre-paid reservation for <?php $this->peopleno;?> at <?php echo $this->restaurantName;?> on <?php echo $this->date;?> at <?php echo $this->time;?> has changed slightly...or a whole lot - I&#39;m an automated email, not a fortuneteller.<br><br>
+      </p>
+      <p>
+        Anyway, this is what the old pre-paid reservation looked like:<br><br>
+      </p>
+
+      <table width="100%" height="161" border="0" cellpadding="0"
+        cellspacing="0" bgcolor="#ececec" style="margin-top: 10px;">
+        <tr>
+          <td width="25">&nbsp;</td>
+          <td width="309">&nbsp;</td>
+          <td width="81">&nbsp;</td>
+          <td width="217">&nbsp;</td>
+          <td width="25">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0"
+              style="font-size: 12px;">
+              <tr>
+                <td height="25" align="left" valign="top"
+                  style="color: #666666;">Order Type: <strong><?php echo $this->oldorderType; ?></strong>
+                </td>
+              </tr>
+              <tr>
+                <td height="25" align="left" valign="top"
+                  style="color: #666666;">Receipt number: <strong><?php echo $this->oldreceiptNo;?></strong>
+                </td>
+              </tr>
+              <tr>
+                <td height="25" align="left" valign="top"
+                  style="color: #666666;">Time of Order: <strong><?php echo $this->oldtimeOfOrder;?></strong>
+                </td>
+              </tr>
+              <tr>
+                <td height="25" align="left" valign="top"
+                  style="color: #666666;">Time of Reservation: <strong><?php echo $this->oldtimeOfDelivery; ?></strong>
+                </td>
+              </tr>
+              <?php if(!empty($this->specialInstructions)){ ?>
+              <tr>
+                <td height="25" align="left" valign="top"
+                  style="color: #666666;">Special Instructions: <br /> <i><?php echo $this->oldspecialInstructions; ?></i>
+                </td>
+              </tr>
+              <?php }?>
+
+            </table>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0"
+              style="font-size: 12px;">
+              <tr>
+                <td colspan="3" align="left" style="color: #666666;"><img
+                  src="<?php echo TEMPLATE_IMG_PATH.'border.png';?>" width="309" height="1" /></td>
+              </tr>                
+                  <?php echo $this->oldorderData;?>
+
+
+            </table>
+
+          </td>
+          <td>&nbsp;</td>
+          <td valign="top">
+
+            <table width="217" border="0" cellpadding="0" cellspacing="0"
+              bgcolor="#FFFFFF">
+              <tr>
+                <td>&nbsp;</td>
+                <td colspan="3" align="right" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td width="6%" rowspan="6">&nbsp;</td>
+              </tr>
+              <tr>
+                <td width="7%">&nbsp;</td>
+                <td width="46%" align="right" valign="top"
+                  style="font-size: 12px; color: #8f8f8f;">Subtotal:</td>
+                <td width="2%" align="left" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td width="35%" align="left" valign="top"
+                  style="font-size: 12px; color: #666666;"><strong><?php echo '$'.$this->oldsubtotal;?></strong></td>
+              </tr>
+              <?php if($this->discount!=0){?>
+              <tr>
+                <td width="7%">&nbsp;</td>
+                <td width="46%" align="right" valign="top"
+                  style="font-size: 12px; color: #8f8f8f;">Discount:</td>
+                <td width="2%" align="left" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td width="35%" align="left" valign="top"
+                  style="font-size: 12px; color: #666666;"><strong><?php echo '$'.$this->olddiscount;?></strong></td>
+              </tr>
+              <?php }?>
+              <tr>
+                <td>&nbsp;</td>
+                <td align="right" valign="top"
+                  style="font-size: 12px; color: #8f8f8f;">Tax:</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #666666;"><strong><?php echo '$'.$this->oldtax;?></strong></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td align="right" valign="top"
+                  style="font-size: 12px; color: #8f8f8f;">Tip Amount:</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #666666;"><strong><?php echo '$'.$this->oldtipAmount;?></strong></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td align="right" valign="top"
+                  style="font-size: 12px; color: #8f8f8f;">Total:</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #ff8208;"><strong><?php echo '$'.$this->oldtotal;?></strong></td>
+              </tr>
+              <tr>
+                <td height="15" colspan="5"></td>
+              </tr>
+              <tr>
+                <td colspan="5"><img src="<?php echo TEMPLATE_IMG_PATH.'whitebdr.gif'; ?>" /></td>
+              </tr>
+              <tr>
+                <td colspan="5">&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td colspan="3" align="left" valign="top"
+                  style="font-size: 12px; color: #666666;"><strong>Payment:</strong><br>
+                  Credit Card<br>
+      <?php echo $this->cardType; ?> (XXXX-XXXX-XXXX-<?php echo $this->cardNo;?> /<br>
+      Exp: <?php echo $this->expiredOn?>)</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan="5">&nbsp;</td>
+              </tr>
+            </table>
+
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="20"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <p> Looks familiar right? Well, forget it. Because this is where we&#39;re at: </p>
+
+      <table width="100%" height="161" border="0" cellpadding="0"
+        cellspacing="0" bgcolor="#ececec" style="margin-top: 10px;">
+        <tr>
+          <td width="25">&nbsp;</td>
+          <td width="309">&nbsp;</td>
+          <td width="81">&nbsp;</td>
+          <td width="217">&nbsp;</td>
+          <td width="25">&nbsp;</td>
+        </tr>
+       
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0"
+              style="font-size: 12px;">
+              <tr>
+                <td height="25" align="left" valign="top"
+                  style="color: #666666;">Order Type: <strong><?php echo $this->orderType; ?></strong>
+                </td>
+              </tr>
+              <tr>
+                <td height="25" align="left" valign="top"
+                  style="color: #666666;">Receipt number: <strong><?php echo $this->receiptNo;?></strong>
+                </td>
+              </tr>
+              <tr>
+                <td height="25" align="left" valign="top"
+                  style="color: #666666;">Time of Order: <strong><?php echo $this->timeOfOrder;?></strong>
+                </td>
+              </tr>
+              <tr>
+                <td height="25" align="left" valign="top"
+                  style="color: #666666;">Time of Reservation: <strong><?php echo $this->timeOfDelivery; ?></strong>
+                </td>
+              </tr>
+              <?php if(!empty($this->specialInstructions)){ ?>
+              <tr>
+                <td height="25" align="left" valign="top"
+                  style="color: #666666;">Special Instructions: <br /> <i><?php echo $this->specialInstructions; ?></i>
+                </td>
+              </tr>
+              <?php }?>
+
+            </table>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0"
+              style="font-size: 12px;">
+              <tr>
+                <td colspan="3" align="left" style="color: #666666;"><img
+                  src="<?php echo TEMPLATE_IMG_PATH.'border.png';?>" width="309" height="1" /></td>
+              </tr>                
+                  <?php echo $this->orderData;?>
+
+
+            </table>
+
+          </td>
+          <td>&nbsp;</td>
+          <td valign="top">
+
+            <table width="217" border="0" cellpadding="0" cellspacing="0"
+              bgcolor="#FFFFFF">
+              <tr>
+                <td>&nbsp;</td>
+                <td colspan="3" align="right" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td width="6%" rowspan="6">&nbsp;</td>
+              </tr>
+              <tr>
+                <td width="7%">&nbsp;</td>
+                <td width="46%" align="right" valign="top"
+                  style="font-size: 12px; color: #8f8f8f;">Subtotal:</td>
+                <td width="2%" align="left" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td width="35%" align="left" valign="top"
+                  style="font-size: 12px; color: #666666;"><strong><?php echo '$'.$this->subtotal;?></strong></td>
+              </tr>
+              <?php if($this->discount!=0){?>
+              <tr>
+                <td width="7%">&nbsp;</td>
+                <td width="46%" align="right" valign="top"
+                  style="font-size: 12px; color: #8f8f8f;">Discount:</td>
+                <td width="2%" align="left" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td width="35%" align="left" valign="top"
+                  style="font-size: 12px; color: #666666;"><strong><?php echo '$'.$this->discount;?></strong></td>
+              </tr>
+              <?php }?>
+              <tr>
+                <td>&nbsp;</td>
+                <td align="right" valign="top"
+                  style="font-size: 12px; color: #8f8f8f;">Tax:</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #666666;"><strong><?php echo '$'.$this->tax;?></strong></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td align="right" valign="top"
+                  style="font-size: 12px; color: #8f8f8f;">Tip Amount:</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #666666;"><strong><?php echo '$'.$this->tipAmount;?></strong></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td align="right" valign="top"
+                  style="font-size: 12px; color: #8f8f8f;">Total:</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #666666;">&nbsp;</td>
+                <td align="left" valign="top"
+                  style="font-size: 12px; color: #ff8208;"><strong><?php echo '$'.$this->total;?></strong></td>
+              </tr>
+              <tr>
+                <td height="15" colspan="5"></td>
+              </tr>
+              <tr>
+                <td colspan="5"><img src="<?php echo TEMPLATE_IMG_PATH.'whitebdr.gif'; ?>" /></td>
+              </tr>
+              <tr>
+                <td colspan="5">&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td colspan="3" align="left" valign="top"
+                  style="font-size: 12px; color: #666666;"><strong>Payment:</strong><br>
+                  Credit Card<br>
+      <?php echo $this->cardType; ?> (XXXX-XXXX-XXXX-<?php echo $this->cardNo;?> /<br>
+      Exp: <?php echo $this->expiredOn?>)</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan="5">&nbsp;</td>
+              </tr>
+            </table>
+
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="20"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <table width="100%" border="0" cellspacing="0" cellpadding="0"
+        style="margin-top: 20px; margin-bottom: 10px;">
+        <tr>
+          <td height="10"></td>
+        </tr>
+        <tr>
+          <td width="596">I&#39;m  guessing everything is in order there, but if you have any questions, take it up with <?php echo $this->userName;?>. I have more templates to fill.<br><br> </td>
+        </tr>
+        
+        <tr>          
+          <td width="596" style="font-size: 13px; color: #666666;">For now
+            though, <br />We must bid you Munch Ado
+          </td>
+        </tr>
+        <tr>
+          <td height="5"></td>
+        </tr>
+      </table> <br></td>
+  </tr>

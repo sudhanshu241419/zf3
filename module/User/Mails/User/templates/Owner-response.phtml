@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html style="width: 100%;">
+    <head>
+        <title>Welcome to Munch Ado || The Munch Ado Sweepstakes</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+            @-ms-viewport {width: device-width;}
+            @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+                img[id="dv1"], img[id="dv2"] {display: none !important;}
+            }
+        </style>
+    </head>
+    <body style="margin: 0; padding: 0; font: normal 16px Arial; color:#333333; width: 100%;">
+        <!--[if (gte mso 9)|(IE)]>
+        <table width="550" align="center" cellpadding="0" cellspacing="0" border="0">
+           <tr>
+              <td>
+                 <![endif]-->
+        <table align="center" bgcolor="#fff" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 550px;">
+            <tr>
+                <td align="center" bgcolor="#3d3a39" valign="top" style="background-color:#3e3a39; text-align: center;padding-top:18px;padding-bottom:9px;">
+                    <a href="<?php echo $this->hostname ?>/" target="_blank" style="border: none; text-decoration: none; outline: none;">
+                        <img src="<?php echo TEMPLATE_IMG_PATH ?>ma_logo.jpg" alt="MunchAdo.com" width="250" height="59" style="border: none; height: 59px; width: 250px;">
+                    </a>
+                </td>
+            </tr>
+           
+            <tr>
+                <td></br>
+                    <p style="font-size: 16px;">
+                        Hey <strong><?php echo $this->name; ?></strong>,
+                    </p>
+                    <p style="font-size: 13px;">
+                        Someone had something to say and they said it to you! <br> <br> 
+                        <strong><?php echo $this->restaurantName; ?></strong> responded to your review:
+                    </p> </br> 
+                    <?php if(isset($this->restaurantComment) && !empty($this->restaurantComment)){ ?>
+                    <p style="font-style: italic; color: #666;">
+                        <img src="<?php echo TEMPLATE_IMG_PATH . 'comma.gif'; ?>" align="left"
+                             style="margin: 0 10px 90px 0" /><?php echo $this->restaurantComment; ?>
+                    </p>
+                    <?php } ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                        <tr>
+                            <td width="569" valign="top"
+                                style="font-size: 13px; line-height: 20px; color: #666;">
+                                Hmm, an even-tempered response. You don&rsquo;t see those too often.
+                                You&rsquo;re welcome to share further thoughts with us and the
+                                rest of the 
+                                <a style="color: #ff8208; text-decoration: none;"
+                                    href="<?php echo $this->web_url; ?>"><strong>MunchAdo.com</strong></a> community 
+                                or any social media you may find appropriate &#8211; not Friendster though.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffffff" style="padding-top:36px;padding-bottom:41px;" valign="middle" align="center">
+                                <!--[if mso]>
+                                           <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.youtube.com/watch?v=G8-5NpCXwEE" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                                             <w:anchorlock/>
+                                             <center>
+                                           <![endif]-->
+                                <a href="<?php echo $this->web_url."/restaurants/".$this->urlRestName."/".$this->restaurant_id."/reviews"; ?>" class="learAboutLoyality" style="background-color:#3e3a39;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 0;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;" target="_blank">Respond Back</a>
+                                <!--[if mso]>
+                                    </center>
+                                  </v:roundrect>
+                                <![endif]-->
+                            </td>
+                        </tr>
+                        
+                        
+                        

@@ -1,0 +1,78 @@
+{
+    "name": "zendframework/skeleton-application",
+    "description": "Skeleton Application for Zend Framework zend-mvc applications",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "framework",
+        "mvc",
+        "zf"
+    ],
+    "homepage": "http://framework.zend.com/",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "zendframework/zend-component-installer": "^1.0",
+        "zendframework/zend-mvc": "^3.0.1",
+        "zfcampus/zf-development-mode": "^3.0",
+        "zendframework/zend-db": "^2.8.1",
+        "zendframework/zend-mvc-form": "^1.0",
+        "zendframework/zend-json": "^3.0",
+        "zendframework/zend-i18n-resources": "^2.5",
+        "zendframework/zend-mvc-i18n": "^1.0",
+        "facebook/graph-sdk": " ^5.5",
+	"google/apiclient": " ^2.0",
+	"pubnub/pubnub": " ~4.0.0",
+	"chrisboulton/php-resque": "^1.2",
+	"stripe/stripe-php": "^5.1.1",	
+        "zendframework/zend-servicemanager-di": "^1.1",
+        "zendframework/zend-cache": "^2.7",
+        "zendframework/zend-serializer": "^2.8",
+        "zendframework/zend-math": "^3.0",
+        "zendframework/zend-session": "^2.8",
+        "mongodb/mongodb": "^1.1",
+        "zendframework/zend-debug": "^2.5",
+        "zendframework/zend-mail": "^2.8",
+        "zendframework/zend-crypt": "^3.2",
+        "ruckusing/ruckusing-migrations":"^1.0" 
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "module/Application/src/",
+            "Rest\\":"module/Rest/src",
+            "Auth\\": "module/Auth/src/",
+            "User\\": "module/User/src/",
+            "User\\Functions\\":"module/User/Functions",
+            "MUtility\\":"vendor/MUtility",
+            "MCommons\\": "vendor/MCommons/src/",
+            "Search\\": "module/Search/src/",
+            "Search\\Common\\": "module/Search/common/",
+            "Search\\Solr\\": "module/Search/solr/",
+            "City\\": "module/City/src/" ,
+            "Home\\": "module/Home/src/",
+            "Restaurant\\": "module/Restaurant/src",
+            "Restaurant\\Functions": "module/Restaurant/functions",
+            "Bookmark\\": "module/Bookmark/src"            
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ApplicationTest\\": "module/Application/test/"
+        }
+    },
+    "extra": [],
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "development-disable": "zf-development-mode disable",
+        "development-enable": "zf-development-mode enable",
+        "development-status": "zf-development-mode status",
+        "post-create-project-cmd": [
+            "@development-enable"
+        ],
+        "serve": "php -S 0.0.0.0:8080 -t public public/index.php",
+        "test": "phpunit"
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html style="width: 100%;">
+   <head>
+      <title>Reservation Invite From Friend : Munch Ado</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <style type="text/css">
+         @-ms-viewport {width: device-width;}
+         @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+         img[id="dv1"], img[id="dv2"] {display: none !important;}
+         }
+      </style>
+   </head>
+   <body style="margin: 0; padding: 0; font: normal 16px Arial; color:#333333; width: 100%;">
+      <!--[if (gte mso 9)|(IE)]>
+      <table width="550" align="center" cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td>
+               <![endif]-->
+               <table align="center" bgcolor="#ffffff" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 550px;">
+                  <tr>
+                     <td align="center" bgcolor="#3d3a39" valign="top" style="background-color:#3e3a39; text-align: center;padding-top:18px;padding-bottom:9px;">
+                        <a href="<?php echo SITE_URL;?>" target="_blank" style="border: none; text-decoration: none; outline: none;">
+                        <img src="<?php echo TEMPLATE_IMG_PATH;?>ma_logo.jpg" alt="MunchAdo.com" width="250" height="59" style="border: none; height: 59px; width: 250px;">
+                        </a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td align="center" style="font-size:0">
+                        <img src="<?php echo TEMPLATE_IMG_PATH;?>header_invite_friend.jpg" alt="Invitee Friend" style="border: none; width: 100%; max-width: 100%; height: auto;display:block;min-height: 100px;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" align="left" valign="top" style="padding-left:30px;padding-right:30px;">
+                        <table bgcolor="#ffffff" align="left" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 490px;">
+                           <tr>
+                              <td bgcolor="#ffffff" style="font-family:arial; font-size:16px;padding-top:26px;line-height:24px; color:#333333;">Hey <strong><?php echo $this->friendname; ?></strong>,</td>
+                           </tr>
+                           <tr>
+                              <td  bgcolor="#ffffff" style="font-family:arial; font-size:16px;line-height:24px; color:#333333;padding-top:20px;">
+                                <strong><?php echo $this->username; ?></strong> has set up a pre-paid reservation at 
+                                <strong><?php echo $this->restaurantName; ?></strong> on <strong><?php echo $this->reservationDate; ?></strong> at 
+                                <strong><?php echo $this->reservationTime; ?></strong> 
+                                for <strong><?php echo $this->peopleNo;?></strong>. 
+                                Hopefully, <strong><?php echo $this->username; ?> </strong>
+                                already consulted you about this. 
+                                 
+                              </td>
+                           </tr>
+                           <tr><td>
+                                   <table width="100%" height="161" border="0" cellpadding="0" cellspacing="0" bgcolor="#ececec" style="margin-top: 10px;">
+                                    <tr>
+                                        <td width="25">&nbsp;</td>
+                                        <td width="309">&nbsp;</td>
+                                        <td width="81">&nbsp;</td>
+                                        <td width="217">&nbsp;</td>
+                                        <td width="25">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>
+                                   <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size: 12px;">
+                                    <tr>
+                                        <td height="25" align="left" valign="top"
+                                            style="color: #666666;">Order Type: <strong><?php echo $this->orderType; ?></strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" valign="top"
+                                            style="color: #666666;">Receipt number: <strong><?php echo $this->receiptNo;?></strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" valign="top"
+                                            style="color: #666666;">Time of Pre-Order Reservation: <strong><?php echo $this->reservationDate; ?> at <?php echo $this->reservationTime;?></strong>
+                                        </td>
+                                    </tr>
+                                    
+                                    <?php if(!empty($this->specialInstructions)){ ?>
+                                    <!--<tr>
+                                        <td height="25" align="left" valign="top"
+                                            style="color: #666666;">Special Instructions: <br /> <i><?php //echo $this->specialInstructions; ?></i>
+                                        </td>
+                                    </tr>-->
+                                    <?php }?>
+                                   </table>
+                                   <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size: 12px;">
+                                    <tr>
+                                        <td colspan="3" align="left" style="color: #666666;"><img
+									src="<?php echo TEMPLATE_IMG_PATH.'border.png';?>" width="309" height="1" /></td>
+                                    </tr>                
+                                    <?php echo $this->orderData;?>
+                                    </table>
+                                   
+                           </td>
+                           <td>&nbsp;</td>
+                           </tr>
+                           </table></td></tr>
+                           <!--<tr>
+                              <td  bgcolor="#ffffff" style="display:block;font-family:arial; color:#867f7c;padding-top:36px;padding-bottom:36px;padding-left:20px;padding-right:20px;"><i>&#8220;<?php //echo $this->mailtext;?>&#8221;</i></td>
+                           </tr>-->
+                           <tr>
+                              <td  bgcolor="#ffffff" valign="middle" align="center">
+                                 <!--[if mso]>
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://munchado.com" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                                              <w:anchorlock/>
+                                              <center>
+                                            <![endif]-->
+                                            <?php
+                                                $invitationAcceptUrl = $this->acceptUrl . "/reservation_invitation";
+                                            ?>
+                                 <br /> <br />
+                                            <a href="<?php echo $invitationAcceptUrl;?>" target="_blank" class="learAboutLoyality"
+                                               style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 0;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">ACCEPT THE INVITATION</a> <br /><br />
+                                            <!--[if mso]>
+                                                </center>
+                                              </v:roundrect>
+                                            <![endif]-->
+                              </td>
+                           </tr>
+                           <tr>
+                              <td  bgcolor="#ffffff" style="font-family:arial; font-size:16px;line-height:24px; color:#333333;padding-top:36px;">
+                                That would be presumptuous and forward – it might even be a power play. 
+                                You're not that kind of diner! Let <strong><?php echo $this->username; ?></strong> know exactly what you think 
+                                about their meal choices and if you're even willing to share a table after this. <br /> <br />
+                              </td>
+                            </tr>
+                          
+                  

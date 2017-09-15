@@ -1,0 +1,33 @@
+	<tr>
+		<td><br>
+			<p style="font-size: 16px;">
+				Greetings <strong><?php echo $friendName; ?></strong>, <br> <br>
+
+			</p>
+      <?php echo $userName; ?> is setting up a little get together over at <strong><?php echo $restaurantName;?></strong>
+			on <strong><?php echo $reservationDate; ?></strong> at <strong><?php echo $reservationtime;?></strong>.
+			<br>
+
+			<p style="font-style: italic; color: #9b9a9a;">
+				<img src="<?php echo TEMPLATE_IMG_PATH.'comma.gif';?>" align="left"
+					style="margin: 0 10px 30px 0" /> <?php echo $mailtext;?> </p> <br>
+			<p>
+				Do you want to get in on the fun and join the order? Just head on
+				over to <a style="color: #ff8208; text-decoration: none;"
+					href="<?php echo $host_name;?>" target="_blank"><strong>MunchAdo.com</strong></a>
+				and accept the invitation. While you're there you can check out the
+				restaurant's menu, choose your dish and start thinking about how
+				you'll customize that sucker to make it your own before you sit down
+				at the table.
+			</p>
+      
+      <?php echo $acceptUrl;?> <?php echo $denyUrl; ?>
+
+      <p>Remember, you'll earn just as many points by joining the reservation as <?php echo $userName;?> gets for creating one. You'll be banking a few extra points and expanding your horizons while keeping pace with <?php echo $userName;?>'s point total.</p>
+
+			<p>Win. Win. Win? Yes, Win.</p>
+            <p><br />Until then though, <br />We must bid you <span style="color: #ff8208; text-decoration: none;" ><strong>Munch Ado</strong></span><br /><br /></p>
+        </td>
+	</tr>
+
+

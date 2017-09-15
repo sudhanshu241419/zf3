@@ -1,0 +1,82 @@
+<tr>
+   <?php if($this->restaurant_logo){ ?>
+   <td align="center" style="font-size:0; background:#000000;padding-top:10px;padding-bottom:10px;" valign="middle">          
+      <img src="<?php echo IMAGE_PATH.$this->rest_code.'/'.$this->restaurant_logo;?>" alt="<?php echo strtolower($this->restaurant_name);?>" style="max-width:71px; width:100%;display:block">
+   </td>
+   <?php }else{ ?>
+    <td align="center" valign="middle" style="font-size:16px;background:#000000;text-align:center;color:#ffffff;padding-top:10px;padding-bottom:10px;">
+      <?php echo $this->restaurantName; ?> 
+   </td>
+   <?php } ?>
+</tr>
+<tr>
+    <td bgcolor="#ffffff" style="font-family:arial; font-size:16px;padding-top:26px;line-height:24px; color:#333333;">Greetings <strong><?php echo $this->friendname; ?></strong>,</td>
+</tr>
+<tr>
+    <td  bgcolor="#ffffff" style="font-family:arial; font-size:16px;line-height:24px; color:#333333;padding-top:20px;">
+      <strong><?php echo $this->username; ?></strong> is setting up a little get together over at <strong><?php echo $this->restaurantName; ?></strong> on <strong><?php echo $this->reservationDate; ?></strong> at <strong><?php echo $this->reservationtime; ?></strong>.
+    </td>
+</tr>
+<tr>
+    <td  bgcolor="#ffffff" style="display:block;font-family:arial; color:#867f7c;padding-top:36px;padding-bottom:36px;padding-left:20px;padding-right:20px;"><i>&#8220;<?php echo $this->mailtext;?>&#8221;</i></td>
+</tr>
+<tr>
+    <td  bgcolor="#ffffff" style="font-family:arial; font-size:16px;line-height:24px; color:#333333;padding-top:20px;">
+        Do you want to get in on the fun and join the order? Just head on over to <a href="<?php echo $this->hostname;?>" style="text-decoration:none;color: #867f7c; font-weight: bold; outline: none;"><?php echo $this->hostname;?></a>. <!--and accept the invitation--> While you&#8217;re there you can check out the restaurant&#8217;s menu, choose your dish and start thinking about how you&#8217;ll customize that sucker to make it your own before you sit down at the table.
+    </td>
+</tr>
+<?php //$invitationAcceptUrl = $this->acceptUrl."/reservation_invitation";?>
+
+<tr>
+   <td bgcolor="#333333" align="center" valign="top" style="padding-left:20px;padding-right:20px;">
+      <table bgcolor="#333333" align="center" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 510px;">
+         <tr>
+            <td height="16" style="line-height:1px; font-size:0" >&nbsp;</td>
+         </tr>
+         <tr>
+            <td align="center" >
+               <table bgcolor="#333333" align="center" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 510px;">
+                  <tr>
+                     <td align="center">
+                        <p style="font-family:arial; font-size:12px;line-height:16px; color:#ffffff; text-align:center; font-weight:bold; margin:0; padding:0; text-transform:uppercase; letter-spacing:2px ">
+                           <?php echo $this->restaurant_address;?>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td align="center" height="24" style="line-height:1px; font-size:0">&nbsp;</td>
+                  </tr>
+                  <tr>
+                     <td align="center">
+                        <span style="display: inline-block; width: auto; overflow: hidden; width: 100%; max-width: 275px;">
+                        <?php if(!empty($this->facebook_url)){?>
+                        <a href="<?php echo $this->facebook_url;?>" target="_blank" style="display: inline-block; outline:none">
+                        <img src="<?php echo TEMPLATE_IMG_PATH; ?>i_fb.png" alt="Facebook" width="11" height="24" border="0">
+                        </a>
+                        <?php }?>
+                            <?php if(!empty($this->twitter_url)){?>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="<?php echo $this->twitter_url;?>" style="display: inline-block; outline:none">
+                        <img src="<?php echo TEMPLATE_IMG_PATH; ?>i_twtr.png" alt="Twitter" width="20" height="24" border="0">
+                       <?php } ?>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <?php if(!empty($this->instagram_url)){?>
+                        <a href="<?php echo $this->instagram_url;?>" target="_blank" style="display: inline-block; outline:none">
+                        <img src="<?php echo TEMPLATE_IMG_PATH; ?>inst.png" alt="Instagram" width="20" height="24" border="0">
+                        </a>
+                        <?php } ?>
+                        </span>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td height="18"  style="line-height:1px; font-size:0">&nbsp;</td>
+         </tr>
+      </table>
+   </td>
+</tr>
+                           
+                   

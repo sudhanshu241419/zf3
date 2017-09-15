@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html style="width: 100%;">
+    <head>
+        <title>Munch Ado | Dine & More Rewards!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+            @-ms-viewport {width: device-width;}
+            @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+                img[id="dv1"], img[id="dv2"] {display: none !important;}
+            }
+        </style>
+    </head>
+    <body style="margin: 0; padding: 0; font: normal 16px Arial; color:#333333; width: 100%;">
+        <!--[if (gte mso 9)|(IE)]>
+        <table width="550" align="center" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+           <td>
+              <![endif]-->
+        <table align="center" bgcolor="#fff" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 550px;">
+            <tr>
+                <td style="background-color:#3e3a39; text-align: center;padding-top:18px;padding-bottom:9px;" bgcolor="#3d3a39" align="center" valign="top">
+                    <a href="<?php echo $this->hostname; ?>" style="border: none; text-decoration: none; outline: none;" target="_blank">
+                        <img src="<?php echo TEMPLATE_IMG_PATH . 'ma_logo.jpg'; ?>" alt="<?php echo $this->hostname; ?>" style="border: none; height: 59px; width: 250px;" height="59" width="250">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="font-size:0">
+                    <img src="<?php echo TEMPLATE_IMG_PATH . 'header_reservations_confirmed.jpg'; ?>" style="border: none; width: 100%; max-width: 100%; height: auto;display:block;min-height: 100px;">
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#ffffff" style="font-family:arial; font-size:18px; line-height:24px; color:#333333;padding-top:30px;">
+                    Your friend <strong><?php echo $this->inviter; ?></strong> wants to share the joys 
+                    of <strong>Munch Ado</strong> with you!<br><br>At Munch Ado, we do all things 
+                    dining and we help you do them best. We're all about finding what you crave 
+                    and eating it. We help you go on food adventures all over town, and find 
+                    the best dining experiences in your neighborhood.
+                    <br><br>Use <?php echo $this->inviter; ?>'s personal link to join now.</td>
+            </tr>
+            <?php if ($this->link) { ?>
+                <tr>
+                    <td style="padding: 17px 0 24px;">
+                        <!--[if mso]>
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?php echo $this->link; ?>" style="height:66px;v-text-anchor:middle;width:486px;" arcsize="9%" stroke="f" fillcolor="#eeeeee">
+                           <w:anchorlock/>
+                           <center>
+                              <![endif]-->
+                        <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%;  color: #3d3a39; font: normal 1.125em/1.375em Arial; text-align: center;background-color: #eeeeee; border-radius: 6px;">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center" valign="middle" align="center" height="60">
+                                        <a href="<?php echo $this->link; ?>" target="_blank" class="visitTheMunchAdoBogBtn" style="font-family: sans-serif; font-size: 1em; font-weight: bold; line-height: 1em; text-align: center; text-decoration: none; width: 100%; max-width: 486px; -webkit-text-size-adjust: none; text-transform: lowercase; overflow: hidden; text-overflow: ellipsis;color: #ff8208;"><?php echo $this->link; ?></a>
+                                    </td>
+                                </tr>
+                           </tbody>
+                        </table>
+                        <!--[if mso]>
+                     </center>
+                  </v:roundrect>
+                  <![endif]-->
+                    </td>
+                </tr>
+            <?php } ?>
+            <tr>
+                <td bgcolor="#ffffff" style="font-family:arial; font-size:18px; line-height:24px; color:#333333;">
+                    We'll get you started on your first food adventure with 100 loyalty points 
+                    when you join and another 15 for using <?php echo $this->inviter; ?>'s referral link. As you 
+                    earn more points, you can use them towards your meals!
+                </td>
+            </tr>
+
+            <?php if ($this->link) { ?>
+                <tr>
+                    <td bgcolor="#ffffff" style="padding-top:36px;padding-bottom:36px;" valign="middle" align="center">
+                        <!--[if mso]>
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?php echo $this->link; ?>" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                           <w:anchorlock/>
+                           <center>
+                              <![endif]-->
+                        <a href="<?php echo $this->link; ?>" target="_blank" class="learAboutLoyality" style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 0;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">Join Now & Earn Points</a>
+                        <!--[if mso]>
+                     </center>
+                  </v:roundrect>
+                  <![endif]-->
+                    </td>
+                </tr>
+            <?php } ?>
+
+
+
+            <tr>
+                <td style="padding-top:41px;padding-bottom:42px;" align="center">
+
+                    <table border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#ffffff">
+                        <tr>
+                            <td style="width: 30%; max-width: 158px;" align="left">
+                                <a href="<?php echo WEB_HOST_URL; ?>loginRedirect?url=mypoints" target="_blank" style="text-decoration:none;">
+                                        <img src="<?php echo TEMPLATE_IMG_PATH . 'i_paywithpoint.jpg'; ?>" border="0" style="max-width:158px;width:100%;display: block;">
+                                   </a>
+                            </td>
+                                <td style="width: 5%; max-width: 25px;" align="left">&nbsp;</td>
+                                <td style="width: 30%; max-width: 158px;" align="left">
+                                    <a href="<?php echo WEB_HOST_URL; ?>loginRedirect?url=myspecials" target="_blank" style="text-decoration:none;">
+                                        <img src="<?php echo TEMPLATE_IMG_PATH . 'i_seesprcials.jpg'; ?>" border="0" style="max-width:158px;width:100%;display: block;">
+                                    </a>
+                                </td>
+                                <td style="width: 5%; max-width: 25px;" align="left">&nbsp;</td>
+                                <td style="width: 30%; max-width: 158px;" align="left">
+                                    <a href="<?php echo WEB_HOST_URL; ?>loyalty-points" target="_blank" style="text-decoration:none;">
+                                        <img src="<?php echo TEMPLATE_IMG_PATH . 'i_learnhowpoint.jpg'; ?>" border="0" style="max-width:158px;width:100%;display: block;">
+                                    </a>
+                                </td>
+                            </tr>
+                            </table>
+                </td>
+            </tr>        

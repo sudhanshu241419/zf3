@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html style="width: 100%;">
+   <head>
+      <title>Canceled Reservation by User Email to Invitee</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <style type="text/css">
+         @-ms-viewport {width: device-width;}
+         @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+         img[id="dv1"], img[id="dv2"] {display: none !important;}
+         }
+      </style>
+   </head>
+   <body style="margin: 0; padding: 0; font: normal 16px Arial; color:#333333; width: 100%;">
+      <!--[if (gte mso 9)|(IE)]>
+      <table width="550" align="center" cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td>
+               <![endif]-->
+               <table align="center" bgcolor="#fff" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 550px;">
+                  <tr>
+                     <td align="center" bgcolor="#3d3a39" valign="top" style="background-color:#3e3a39; text-align: center;padding-top:18px;padding-bottom:9px;">
+                        <a href="<?php echo $this->hostname;?>" target="_blank" style="border: none; text-decoration: none; outline: none;">
+                        <img src="<?php echo TEMPLATE_IMG_PATH.'ma_logo.jpg';?>"  width="250" height="59" style="border: none; height: 59px; width: 250px;">
+                        </a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td align="left" valign="top" bgcolor="#ffffff" style="padding-left:30px;padding-right:30px;">
+                        <table bgcolor="#ffffff" align="left" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 490px;">
+                           <tr>
+                              <td bgcolor="#ffffff" style="font-family:arial; font-size:18px; line-height:24px; padding-top:26px; color:#333333;">
+                                 Hey <strong><?php echo $this->username ;?></strong>,<br /><br /><strong><?php echo $this->friendname;?></strong>&#8217;s reservation for <strong><?php echo $this->numberOfPeople;?></strong> on <strong><?php echo $this->reservationDate;?></strong> at <strong><?php echo $this->reservationtime;?></strong> has been canceled.<br /><br />Not leadership material if you ask us. Never let <strong><?php echo $this->friendname;?></strong> plan anything ever again.<br /><br />You though, you <strong><?php echo $this->username ;?></strong> look like a go-getter. A doer, not a me-tooer. A prince among thieves, a master of your domain. A queen of your castle.A Debbie do-er, not a Debbie Downer. So grab the reigns and set up your own reservation. This way, you can earn some sweet, sweet loyalty points you can lord over <strong><?php echo $this->friendname;?></strong>.
+                               </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" style="padding-top:36px;padding-bottom:41px;" valign="middle" align="center">
+                                 <!--[if mso]>
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?php echo $this->hostname;?>" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                                              <w:anchorlock/>
+                                              <center>
+                                            <![endif]-->
+                                            <a href="<?php echo $this->hostname."/loginRedirect?url=reserve";?>" target="_blank" class="learAboutLoyality"
+                                               style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 0;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">Make Your Own Reservation</a>
+                                            <!--[if mso]>
+                                                </center>
+                                              </v:roundrect>
+                                            <![endif]-->
+                              </td>
+                           </tr>

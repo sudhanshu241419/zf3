@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html style="width: 100%;">
+    <head>
+        <title>Munch Ado | Dine & More Rewards!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+            @-ms-viewport {width: device-width;}
+            @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+                img[id="dv1"], img[id="dv2"] {display: none !important;}
+            }
+        </style>
+    </head>
+    <body style="margin: 0; padding: 0; font: normal 16px Arial; color:#333333; width: 100%;">
+        <!--[if (gte mso 9)|(IE)]>
+        <table width="550" align="center" cellpadding="0" cellspacing="0" border="0">
+           <tr>
+              <td>
+                 <![endif]-->
+        <table align="center" bgcolor="#fff" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 550px;">
+            <tr>
+                <td align="center" style="font-size:0;padding-top:20px;padding-bottom:26px;">
+                    <a href="<?php echo $this->hostname; ?>" target="_blank" style="border: none; text-decoration: none; outline: none;">
+                    <img src="<?php echo TEMPLATE_IMG_PATH . 'logo_dinein.png'; ?>" alt="" style="border: none;display:block">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="font-size:0">
+                    <a href="<?php echo $this->hostname; ?>" target="_blank" style="border: none; text-decoration: none; outline: none;">
+                        <img src="<?php echo TEMPLATE_IMG_PATH . 'header_dinein_1.jpg'; ?>" alt="" style="border: none; width: 100%; max-width: 100%; height: auto;display:block">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#ffffff" align="left" valign="top" style="padding-left:30px;padding-right:30px;">
+                    <table bgcolor="#ffffff" align="left" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 490px;">
+                        <tr>
+                            <td bgcolor="#ffffff" style="font-family:arial; font-size:18px;padding-top:35px;line-height:24px;padding-bottom:39px;color:#333333;text-align:left">
+                                Your friend <strong><?php echo $this->inviter; ?></strong> wants to share the joys of <strong><?php echo $this->restaurantName; ?></strong> Dine & More rewards program, presented by Munch Ado with you!<br /><br />Dine & More members are treated to irresistible rewards, free food and oh so much more. 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table align="left" bgcolor="#fff" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 550px;">
+                                    <tr>
+                                        <td align="left" valign="top" style="font-size:0;padding-right:10px;padding-left:10px;">
+                                            <img src="<?php echo TEMPLATE_IMG_PATH . 'i_vip_perks.png';?>" style="display:block">
+                                        </td>
+                                        <td style="font-family:arial; font-size:18px;line-height:24px;color:#333333;text-align:left;padding-bottom:20px;"><strong>VIP Perks & Flash Offers</strong><br />Enjoy access to perks like priority seating on reservations and special flash offers like retailer credits and bonus loyalty points.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top" style="font-size:0;padding-right:10px;padding-left:10px;">
+                                            <img src="<?php echo TEMPLATE_IMG_PATH . 'i_loyalty_points.png';?>" style="display:block">
+                                        </td>
+                                        <td style="font-family:arial; font-size:18px;line-height:24px;color:#333333;text-align:left;padding-bottom:20px;"><strong>Loyalty Points</strong><br />Earn points for sharing your dining experiences with us when you write reviews, refer friends, book tables, and more online.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top" style="font-size:0;padding-right:10px;padding-left:10px;">
+                                            <img src="<?php echo TEMPLATE_IMG_PATH . 'i_exclusiverewards.png'; ?>" style="display:block">
+                                        </td>
+                                        <td style="font-family:arial; font-size:18px;line-height:24px;color:#333333;text-align:left;padding-bottom:20px;"><strong>Exclusive Rewards & Specials</strong><br />Receive discounted and delicious food specials and rewards just for select Dine & More members.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;text-align:center;padding-top:15px;padding-bottom:10px;">
+                                Join today and never dine the same way again. 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  bgcolor="#ffffff" style="padding-top:8px;padding-bottom:8px;" valign="middle" align="center">
+                                <?php if ($this->link) { ?>
+                                <!--[if mso]>
+                                           <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?php echo $this->link; ?>" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                                             <w:anchorlock/>
+                                             <center>
+                                           <![endif]-->
+                                <a href="<?php echo $this->link; ?>" target="_blank"
+                                   style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 5px;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">Join Now</a>
+                               <?php } elseif ($this->loyality_code) { ?>
+                               <!--[if mso]>
+                                           <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?php echo $this->hostname . '/referral/' . $this->referral_code . '/' . $this->loyality_code; ?>" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                                             <w:anchorlock/>
+                                             <center>
+                                           <![endif]-->
+                                <a href="<?php echo $this->hostname . '/loginRedirect?url=referral/' . $this->referral_code . '/' . $this->loyality_code; ?>" target="_blank"
+                                   style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 5px;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">Join Now</a>
+                                <?php } else { ?>
+                               <!--[if mso]>
+                                           <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?php echo $this->hostname . '/referral/' . $this->referral_code; ?>" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                                             <w:anchorlock/>
+                                             <center>
+                                           <![endif]-->
+                                <a href="<?php echo $this->hostname . '/loginRedirect?url=referral/' . $this->referral_code; ?>" target="_blank"
+                                   style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 5px;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">Join Now</a>
+                                <?php } ?>
+                                
+                                <!--[if mso]>
+                                    </center>
+                                  </v:roundrect>
+                                <![endif]-->
+                            </td>
+                        </tr>
+                        <tr>
+                <td style="padding-top:41px;padding-bottom:42px;" align="center">
+
+                    <table border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#ffffff">
+                        <tr>
+                            <td style="width: 30%; max-width: 158px;" align="left">
+                                <a href="<?php echo WEB_HOST_URL; ?>loginRedirect?url=mypoints" target="_blank" style="text-decoration:none;">
+                                        <img src="<?php echo TEMPLATE_IMG_PATH . 'i_paywithpoint.jpg'; ?>" border="0" style="max-width:158px;width:100%;display: block;">
+                                   </a>
+                            </td>
+                                <td style="width: 5%; max-width: 25px;" align="left">&nbsp;</td>
+                                <td style="width: 30%; max-width: 158px;" align="left">
+                                    <a href="<?php echo WEB_HOST_URL; ?>loginRedirect?url=myspecials" target="_blank" style="text-decoration:none;">
+                                        <img src="<?php echo TEMPLATE_IMG_PATH . 'i_seesprcials.jpg'; ?>" border="0" style="max-width:158px;width:100%;display: block;">
+                                    </a>
+                                </td>
+                                <td style="width: 5%; max-width: 25px;" align="left">&nbsp;</td>
+                                <td style="width: 30%; max-width: 158px;" align="left">
+                                    <a href="<?php echo WEB_HOST_URL; ?>loyalty-points" target="_blank" style="text-decoration:none;">
+                                        <img src="<?php echo TEMPLATE_IMG_PATH . 'i_learnhowpoint.jpg'; ?>" border="0" style="max-width:158px;width:100%;display: block;">
+                                    </a>
+                                </td>
+                            </tr>
+                            </table>
+                </td>
+            </tr>
+                    </table>
+                </td>
+            </tr>

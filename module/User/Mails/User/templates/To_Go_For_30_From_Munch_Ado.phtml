@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html style="width: 100%;">
+    <head>
+        <title>Munch Ado | Dine & More Rewards!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+            @-ms-viewport {width: device-width;}
+            @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+                img[id="dv1"], img[id="dv2"] {display: none !important;}
+            }
+        </style>
+    </head>
+    <body style="margin: 0; padding: 0; font: normal 16px Arial; color:#333333; width: 100%;">
+        <!--[if (gte mso 9)|(IE)]>
+        <table width="550" align="center" cellpadding="0" cellspacing="0" border="0">
+           <tr>
+              <td>
+                 <![endif]-->
+        <table align="center" bgcolor="#fff" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 550px;">
+            <tr>
+                <td align="center" style="font-size:0;padding-top:20px;padding-bottom:26px;">
+                    <a href='<?php echo $this->restaurantLink;?>'><img src="<?php echo TEMPLATE_IMG_PATH . 'logo_dinein.png';?>" alt="" style="border: none;display:block"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <!--[if mso]>
+                   <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"  style="width:550;height:236px;">
+                      <v:fill type="tile" src="<?php echo TEMPLATE_IMG_PATH.'header_dinein_bg.jpg';?>" color="#ffffff " />
+                      <v:textbox inset="0,0,0,0">
+                         <table style="width: 100%;">
+                            <tr>
+                               <td style="font-size:85px;font-family: Arial;font-weight:bold;color:#ffffff;text-align:center;padding-top:7%;padding-bottom:9%;">15 points</td>
+                            </tr>
+                         </table>
+                         <![endif]-->  
+                         <!--[if gte mso 9]>
+                      </v:textbox>
+                   </v:rect>
+                   <![endif]-->
+                </td>
+             </tr>
+             <tr style="mso-hide: all">
+                <td bgcolor="#000000" background="<?php echo TEMPLATE_IMG_PATH.'header_dinein_bg.jpg';?>" style="font-size:85px;font-family: Arial;font-weight:bold;color:#ffffff;text-align:center;padding-top:12%;padding-bottom:12%;">15 points</td>
+             </tr>
+            <tr>
+                <td bgcolor="#ffffff" align="left" valign="top" style="padding-left:30px;padding-right:30px;">
+                    <table bgcolor="#ffffff" align="left" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 490px;">
+                        <tr>
+                            <td bgcolor="#ffffff" style="font-family:arial; font-size:18px;padding-top:35px;line-height:24px;padding-bottom:39px;color:#333333;text-align:left">Way to go!<br /><br />
+                                Your friend <strong><?php echo $this->inviteename; ?></strong> is loving <strong><?php echo $this->restaurantName; ?></strong> and the points 
+                                you&#8217;ve hooked them up with. 
+                                <?php if($this->loyalityCode!="M100000"){?>
+                                We&#8217;re sure you love the <strong><?php echo $this->point15;?></strong> 
+                                points you just earned too, but don&#8217;t forget, you&#8217;ll earn another 
+                                <strong><?php echo $this->point250;?></strong> points when <strong><?php echo $this->inviteename; ?></strong> 
+                                placed their first order so don&#8217;t be afraid to prod &#8216;em a little more. 
+                                <?php }else{ ?>
+                                We&#8217;re sure you love the <strong><?php echo $this->point15;?></strong> 
+                                points you just earned.
+                                <?php } ?>
+                                They&#8217;ll thank you for it later.<br /><br />You can earn another <strong><?php echo $this->point15;?></strong> points for each friend who joins with your unique referral 
+                                link so share the food love with more and more people. 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  bgcolor="#ffffff" style="padding-top:35px;padding-bottom:65px;" valign="middle" align="center">
+                                <!--[if mso]>
+                                           <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://munchado.com" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                                             <w:anchorlock/>
+                                             <center>
+                                           <![endif]-->
+                                <a href="https://munchado.com/" target="_blank"
+                                   style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 5px;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">Tell all your<br />digital friends</a>
+                                <!--[if mso]>
+                                    </center>
+                                  </v:roundrect>
+                                <![endif]-->
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>

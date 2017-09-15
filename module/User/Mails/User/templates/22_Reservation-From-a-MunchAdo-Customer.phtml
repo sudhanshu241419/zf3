@@ -1,0 +1,31 @@
+<tr>
+    <td><br>
+        <p style="font-size: 16px;">
+            Good News<strong> <?php echo $this->restaurant_name; ?>,</strong>
+        </p><br>
+        It looks like <strong><?php echo $this->username; ?></strong> has requested a table for <strong><?php echo $this->party_size; ?></strong> on <strong><?php echo $this->display_date; ?></strong> at <strong><?php echo $this->display_time ?></strong>.<br>
+        <br>
+    </td>
+ </tr>
+
+<tr>
+    <td bgcolor="#ffffff" style="padding-top:36px;padding-bottom:41px;" valign="middle" align="center">
+        <!--[if mso]>
+                   <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?php echo DASHBOARD_URL . "/#!reservation"; ?>" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                     <w:anchorlock/>
+                     <center>
+                   <![endif]-->
+        <a href="<?php echo DASHBOARD_URL . "/#!reservation"; ?>" target="_blank" class="learAboutLoyality"
+           style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 0;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">Manage This Request</a>
+        <!--[if mso]>
+            </center>
+          </v:roundrect>
+        <![endif]-->
+    </td>
+</tr>
+<tr>
+    <td> 
+        <p>
+            Best, <br />The Munch Ado Crew <br></p>
+    </td>
+</tr>

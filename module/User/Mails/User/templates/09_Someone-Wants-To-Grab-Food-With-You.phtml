@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html style="width: 100%;">
+   <head>
+      <title>Reservation Invite From Friend : Munch Ado</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <style type="text/css">
+         @-ms-viewport {width: device-width;}
+         @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+         img[id="dv1"], img[id="dv2"] {display: none !important;}
+         }
+      </style>
+   </head>
+   <body style="margin: 0; padding: 0; font: normal 16px Arial; color:#333333; width: 100%;">
+      <!--[if (gte mso 9)|(IE)]>
+      <table width="550" align="center" cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td>
+               <![endif]-->
+               <table align="center" bgcolor="#ffffff" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 550px;">
+                  <tr>
+                     <td align="center" bgcolor="#3d3a39" valign="top" style="background-color:#3e3a39; text-align: center;padding-top:18px;padding-bottom:9px;">
+                        <a href="<?php echo $this->hostname;?>" target="_blank" style="border: none; text-decoration: none; outline: none;">
+                        <img src="<?php echo TEMPLATE_IMG_PATH.'ma_logo.jpg';?>" width="250" height="59" style="border: none; height: 59px; width: 250px;">
+                        </a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td align="center" style="font-size:0">
+                        <img src="<?php echo TEMPLATE_IMG_PATH.'header_invite_friend.jpg';?>" alt="Invitee Friend" style="border: none; width: 100%; max-width: 100%; height: auto;display:block;min-height: 100px;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" align="left" valign="top" style="padding-left:30px;padding-right:30px;">
+                        <table bgcolor="#ffffff" align="left" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 490px;">
+                           <tr>
+                              <td bgcolor="#ffffff" style="font-family:arial; font-size:16px;padding-top:26px;line-height:24px; color:#333333;">Greetings <strong><?php echo $this->friendname; ?></strong>,</td>
+                           </tr>
+                           <tr>
+                              <td  bgcolor="#ffffff" style="font-family:arial; font-size:16px;line-height:24px; color:#333333;padding-top:20px;">
+                                <strong><?php echo $this->username; ?></strong> is setting up a little get together over at <strong><?php echo $this->restaurantName; ?></strong> on <strong><?php echo $this->reservationDate; ?></strong> at <strong><?php echo $this->reservationtime; ?></strong>.
+                              </td>
+                           </tr>
+                           <tr>
+                              <td  bgcolor="#ffffff" style="display:block;font-family:arial; color:#867f7c;padding-top:36px;padding-bottom:36px;padding-left:20px;padding-right:20px;"><i>&#8220;<?php echo $this->mailtext;?>&#8221;</i></td>
+                           </tr>
+                           <tr>
+                              <td  bgcolor="#ffffff" style="font-family:arial; font-size:16px;line-height:24px; color:#333333;padding-top:20px;">
+                                  Do you want to get in on the fun and join the order? Just head on over to <a href="http://munchado.com" style="text-decoration:none;color: #867f7c; font-weight: bold; outline: none;">MunchAdo.com</a> and accept the invitation. While you&#8217;re there you can check out the restaurant&#8217;s menu, choose your dish and start thinking about how you&#8217;ll customize that sucker to make it your own before you sit down at the table.
+                              </td>
+                            </tr>
+                            <?php $invitationAcceptUrl = $this->acceptUrl."/reservation_invitation";?>
+                           <tr>
+                              <td  bgcolor="#ffffff" style="padding-top:20px;" valign="middle" align="center">
+                                 <!--[if mso]>
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?php echo $invitationAcceptUrl;?>" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                                              <w:anchorlock/>
+                                              <center>
+                                            <![endif]-->
+                                            <a href="<?php echo $invitationAcceptUrl;?>" target="_blank" class="learAboutLoyality"
+                                               style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 0;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">ACCEPT THE INVITATION</a> <br /><br />
+                                            <!--[if mso]>
+                                                </center>
+                                              </v:roundrect>
+                                            <![endif]-->
+                              </td>
+                           </tr>
+                           
+                           <!--<tr>
+                              <td  bgcolor="#ffffff" style="padding-top:10px;" valign="middle" align="center">
+                                 <!--[if mso]>
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?php echo $this->hostname;?>" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#3e3a39">
+                                              <w:anchorlock/>
+                                              <center>
+                                            <![endif]-->
+                                            <!--<a href="<?php //echo $this->hostname;?>" target="_blank" class="learAboutLoyality"
+                                               style="background-color:#3e3a39;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 0;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">deny</a>
+                                            <!--[if mso]>
+                                                </center>
+                                              </v:roundrect>
+                                            <![endif]-->
+                              <!--</td>
+                           </tr>-->
+                              
+                           <!--<tr>
+                              <td  bgcolor="#ffffff" style="font-family:arial; font-size:16px;line-height:24px; color:#333333;padding-top:20px;">
+                                Remember, you&#8217;ll earn just as many points by joining the reservation as <strong><?php //echo $this->username; ?></strong> gets for creating one. You&#8217;ll be banking a few extra points and expanding your horizons while keeping pace with <strong><?php //echo $this->username; ?>&#8217;s</strong> point total.<br /><br /><strong>Win. Win. Win? Yes, Win.</strong><br /><br />
+                              </td>
+                            </tr>-->

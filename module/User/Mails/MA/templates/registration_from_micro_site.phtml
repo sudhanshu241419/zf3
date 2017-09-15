@@ -1,0 +1,162 @@
+<tr>
+   <?php if($this->restaurant_logo){ ?>
+   <td align="center" style="font-size:0; background:#000000;padding-top:10px;padding-bottom:10px;" valign="middle">       
+      <img src="<?php echo IMAGE_PATH.$this->rest_code.'/'.$this->restaurant_logo;?>" alt="<?php echo strtolower($this->restaurant_name);?>" style="max-width:200px;max-height:150px;display:block">
+   </td>
+   <?php }else{ ?>
+   <td align="center" valign="middle" style="font-size:16px;background:#000000;text-align:center;color:#ffffff;padding-top:10px;padding-bottom:10px;">
+      <?php echo $this->restaurant_name; ?> 
+   </td>
+   <?php } ?>
+</tr><!-- end of header -->   
+
+
+<tr>
+    <td bgcolor="#ffffff" align="left" valign="top" style="padding-left:20px;padding-right:20px;">
+        <table bgcolor="#ffffff" align="left" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 510px;">
+            <tr>
+                <td align="center" height="39" style="line-height:1px; font-size:0px;">&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td style="font-family:arial; font-size:18px;padding-top:18px;line-height:24px;padding-bottom:19px;color:#333333;text-align:left">
+                    Let Us Celebrate You
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family:arial; font-size:18px;padding-top:18px;line-height:24px;padding-bottom:19px;color:#333333;text-align:left">
+                    Thank you for joining our new website! We can't wait to treat you like the VIP you are. 
+                </td>
+            </tr>
+
+            <tr>
+                <td style="font-family:arial; font-size:18px;padding-top:18px;line-height:24px;padding-bottom:19px;color:#333333;text-align:left">
+                    We're so happy to finally be offering online ordering and booking to you, directly. By using this site, 
+                    you're helping us continue to provide the same great food at no additional fee for you or for us!
+                </td>
+            </tr>
+
+            <tr>
+                <td style="font-family:arial; font-size:18px;padding-top:18px;line-height:24px;padding-bottom:19px;color:#333333;text-align:left">
+                    Thank you for joining our new website! We can't wait to treat you like the VIP you are. 
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table align="left" bgcolor="#fff" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 550px;">
+                        <tr>
+                            <td align="left" valign="top" style="font-size:0;padding-right:10px;padding-left:10px;">
+                                <img src="<?php echo TEMPLATE_IMG_PATH . 'i_vip_perks.png'; ?>" style="display:block">
+                            </td>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;color:#333333;text-align:left;padding-bottom:20px;">
+                                <strong>VIP Perks & Flash Offers</strong><br />
+                                Enjoy access to perks like priority seating on reservations and special flash offers like retailer 
+                                credits and bonus loyalty points. 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top" style="font-size:0;padding-right:10px;padding-left:10px;">
+                                <img src="<?php echo TEMPLATE_IMG_PATH . 'i_loyalty_points.png'; ?>" style="display:block">
+                            </td>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;color:#333333;text-align:left;padding-bottom:20px;">
+                                <strong>Loyalty Points</strong><br />
+                                Earn points for sharing your dining experiences with us when you write reviews, refer friends, 
+                                book tables, and more online.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top" style="font-size:0;padding-right:10px;padding-left:10px;">
+                                <img src="<?php echo TEMPLATE_IMG_PATH . 'i_exclusiverewards.png'; ?>" style="display:block">
+                            </td>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;color:#333333;text-align:left;padding-bottom:20px;">
+                                <strong>Exclusive Rewards & Specials</strong><br />
+                                Receive discounted and delicious food specials and rewards just for select Dine & More members.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top" style="font-size:0;padding-right:10px;padding-left:10px;">
+                                <img src="<?php echo TEMPLATE_IMG_PATH . 'i_card.png'; ?>" style="display:block">
+                            </td>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;color:#333333;text-align:left;padding-bottom:20px;">
+                                <strong>Pay With Points</strong><br />
+                                Use the loyalty points you earn towards free food when you order online. We've 
+                                credited your account <?php echo $this->point; ?> points just for joining.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family:arial; font-size:18px;padding-top:18px;line-height:24px;padding-bottom:19px;color:#333333;text-align:left">
+                    Keep an eye on your inbox for the latest from our Dine & More rewards program, and sign intocomplete 
+                    your profile for more personalized benefits. 
+                </td>
+            </tr>
+
+            <tr>
+                <td style="font-family:arial; font-size:18px;padding-top:18px;line-height:24px;padding-bottom:19px;color:#333333;text-align:left">
+                    We can't wait to share amazing meals and moments with you.
+                </td>
+            </tr>
+
+            <tr>
+                <td  bgcolor="#ffffff" style="padding-top:8px;padding-bottom:8px;" valign="middle" align="center">
+                    <!--[if mso]>
+                               <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?php echo $this->web_url; ?>/templogin" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                                 <w:anchorlock/>
+                                 <center>
+                               <![endif]-->                            
+                    <a href="<?php echo $this->hostname; ?>" target="_blank"
+                       style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 5px;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">Sign In to Dine & More</a>
+
+                    <!--[if mso]>
+                        </center>
+                      </v:roundrect>
+                    <![endif]-->
+                </td>
+            </tr>
+
+
+            <tr>
+                <td bgcolor="#ed1c24" align="center" valign="top" style="padding-left:20px;padding-right:20px;" height="40px" >
+                    <table bgcolor="#ed1c24" align="center" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 510px;">
+                        <tr><td height="16" style="line-height:1px; font-size:0" >&nbsp;</td></tr>
+                        <tr>
+                            <td align="center" >
+                                <table bgcolor="#333333" align="center" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 510px;">
+                                    <tr>
+                                        <td align="center" style="text-decoration:none !important; color:#ffffff !important;">
+                                            <p style="font-family:arial; font-size:12px;line-height:16px; color:#ffffff; text-align:center; font-weight:bold; margin:0; padding:0; text-transform:uppercase; letter-spacing:2px; text-decoration:none !important; text-decoration:none; color:#ffffff; color:#ffffff !important;">
+                                                <?php echo $this->restaurant_address; ?>
+                                            </p></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td align="center" height="24" style="line-height:1px; font-size:0">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <span style="display: inline-block; width: auto; overflow: hidden; width: 100%; max-width: 275px;">
+                                                <a href="<?php echo $this->facebook_url; ?>" target="_blank" style="display: inline-block; outline:none">
+                                                    <img src="<?php echo TEMPLATE_IMG_PATH; ?>i_fb.png" alt="Facebook" width="13" height="24" border="0">
+                                                </a>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <a href="<?php echo $this->twitter_url; ?>" style="display: inline-block; outline:none">
+                                                    <img src="<?php echo TEMPLATE_IMG_PATH; ?>i_twtr.png" alt="Twitter" width="20" height="24" border="0">
+                                                </a>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <a href="<?php echo $this->instagram_url; ?>" target="_blank" style="display: inline-block; outline:none">
+                                                    <img src="<?php echo TEMPLATE_IMG_PATH; ?>inst.png" alt="Instagram" width="23" height="24" border="0">
+                                                </a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+                        <tr><td height="18"  style="line-height:1px; font-size:0">&nbsp;</td></tr>
+                    </table>
+                </td>
+            </tr><!-- end of footer --> 

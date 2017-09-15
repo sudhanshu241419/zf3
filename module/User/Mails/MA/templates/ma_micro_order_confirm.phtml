@@ -1,0 +1,211 @@
+<tr>
+   <?php if(isset($this->restaurant_logo) && !empty($this->restaurant_logo)){ ?>
+   <td align="center" style="font-size:0; background:#000000;padding-top:10px;padding-bottom:10px;" valign="middle">       
+      <img src="<?php echo IMAGE_PATH.$this->rest_code.'/'.$this->restaurant_logo;?>" alt="<?php echo strtolower($this->restaurant_name);?>" style="max-width:200px;max-height:150px;display:block">
+   </td>
+   <?php }else{ ?>
+   <td align="center" valign="middle" style="font-size:16px;background:#000000;text-align:center;color:#ffffff;padding-top:10px;padding-bottom:10px;">
+      <?php echo $this->restaurant_name; ?> 
+   </td>
+   <?php } ?>
+</tr>
+<tr>
+   <td bgcolor="#ffffff" align="left" valign="top" style="padding-left:20px;padding-right:20px;">
+      <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 490px;">
+         <td style="font: normal 16px Arial; color: #3d3a39; text-align: left; padding-top: 18px;" align="left">
+            <?php if($this->status != 'ready'){?>
+            Hey <strong><?php echo $this->name;?></strong>, 
+            <?php
+               }
+               ?>
+            <br><br>
+            <?php 
+               if($this->status == 'cancel'){
+               ?>
+            We&#8217;re sorry we were unable to fulfill your order. 
+            <?php               
+               }elseif($this->status == 'confirm'){
+                   if($this->is_ordertype=='takeout'){
+               ?>
+            You&#8217;ve put together an amazing order. We can&#8217;t wait to make it for you.
+            <?php }else{ ?>
+            You&#8217;ve put together an amazing order.      
+            <?php }
+               }elseif($this->status == 'ready' && $this->is_ordertype=='takeout'){ ?>
+            We&#8217;ve finished preparing your takeout order and can&#8217;t wait for you to enjoy it. 
+            <?php } ?>
+         </td>
+         </tr>
+         <tr>
+            <td height="20">&nbsp;</td>
+         </tr>
+         <tr>
+            <td bgcolor="#f5f4f4">
+               <table align="left" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" >
+                  <tr>
+                     <td style="font-family:arial; font-size:18px; padding:14px; color:#333333;">
+                        <p style="margin:0;font-weight: bold;">Order Type:</p>
+                        <?php echo $this->order_type;?>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="font-family:arial; font-size:18px; padding:14px; color:#333333;">
+                        <p style="margin:0;font-weight: bold;">Receipt number:</p>
+                        <?php echo $this->receipt_number;?>
+                     </td>
+                  </tr>
+                  <?php if($this->is_ordertype!="takeout") { ?>
+                  <tr>
+                     <td style="font-family:arial; font-size:18px; padding:14px; color:#333333;">
+                        <p style="margin:0;font-weight: bold;">Delivery to:</p>
+                        <?php echo $this->delivery_to;?>
+                     </td>
+                  </tr>
+                  <?php } ?>
+                  <tr>
+                     <td style="font-family:arial; font-size:18px; padding:14px; color:#333333;">
+                        <p style="margin:0;font-weight: bold;">Time of Order:</p>
+                        <?php echo $this->time_of_order;?><!--Aug 18, 2015 at 01:11 PM-->
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="font-family:arial; font-size:18px; padding:14px; color:#333333;">
+                        <p style="margin:0;font-weight: bold;">Time to <?php if($this->is_ordertype=='takeout'){ ?>Takeout <?php }else{ ?>Delivery <?php } ?>:</p>
+                        <?php echo $this->time_to_delivery;?><!--Aug 18, 2015 at 02:15 PM-->
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="font-family:arial; font-size:18px; padding:14px; color:#333333;">
+                        <p style="margin:0;font-weight: bold;">Special Instructions:</p>
+                        <i>-<?php echo $this->delivery_instruction;?></i>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td bgcolor="#ffffff" height="20"></td>
+         </tr>
+         <tr>
+            <?php echo $this->order_data; ?>
+         </tr>
+         <tr>
+            <td height="20" bgcolor="#ffffff"></td>
+         </tr>
+         <tr>
+            <td bgcolor="#f5f4f4" style="padding:20px;">
+               <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family:arial;font-size:18px;line-height:30px;">
+                  <tr>
+                     <td align="right" width="50%" style="font">Subtotal:</td>
+                     <td align="left">$<?php echo $this->sub_total; ?></td>
+                  </tr>
+                  <tr>
+                     <td align="right">Tax:</td>
+                     <td align="left">$<?php echo $this->tax; ?></td>
+                  </tr>
+                  <?php echo $this->promo_discount; ?>
+                  <?php if($this->is_ordertype!='takeout'){ ?>
+                  <tr>
+                     <td align="right">Tip Amount:</td>
+                     <td align="left"><?php echo $this->tip_amount;?></td>
+                  </tr>
+                  <?php }?>
+                  <tr style="font-size:28px;font-weight:bold;">
+                     <td align="right" style="padding-top:27px;">Total:</td>
+                     <td align="left" style="padding-top:27px;">$<?php echo $this->total; ?></td>
+                  </tr>
+                  <?php echo $this->redeemed_point_text; ?>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td height="10"></td>
+         </tr>
+         <?php echo $this->card_number;?>
+         <tr>
+            <td style="font-family:arial;font-size:16px;padding-top:18px;"> 
+               <?php if($this->status == 'ready'){ ?>
+               See you in a few!                
+               <?php }elseif($this->status == 'cancel'){ echo $this->cancelReason;?>
+               <br /><br />
+               We hope you&#8217;ll try us again soon. 
+               <?php }elseif($this->status == 'confirm' && $this->is_ordertype=='delevery'){ ?>
+               We hope you enjoy eating it as much as we enjoy making it for you.
+               <?php } ?>
+            </td>
+         </tr>
+         <?php if($this->status == 'ready'){ ?>
+          <td bgcolor="#ffffff" style="padding-top:36px;padding-bottom:41px;" valign="middle" align="center">
+                                <!--[if mso]>
+                                           <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#mapIt#" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                                             <w:anchorlock/>
+                                             <center>
+                                           <![endif]-->
+                                <a href="http://maps.google.com/maps?q=<?php echo $this->addressMapIt;?>" target="_blank" class="learAboutLoyality"
+                                   style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 0;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">Map It</a>
+                                <!--[if mso]>
+                                    </center>
+                                  </v:roundrect>
+                                <![endif]-->
+                            </td>
+         <?php } ?>
+        
+         <tr>
+            <td style="padding-top:30px;padding-bottom:19px;font-family:arial;font-size:18px;line-height:24px;">
+               Best,<br />The <?php echo $this->restaurant_name;?> Staff
+            </td>
+         </tr>
+   </td>
+</tr>
+<tr>
+   <td bgcolor="#333333" align="center" valign="top" style="padding-left:20px;padding-right:20px;">
+      <table bgcolor="#333333" align="center" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 510px;">
+         <tr>
+            <td height="16" style="line-height:1px; font-size:0" >&nbsp;</td>
+         </tr>
+         <tr>
+            <td align="center" >
+               <table bgcolor="#333333" align="center" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 510px;">
+                  <tr>
+                     <td align="center">
+                        <p style="font-family:arial; font-size:12px;line-height:16px; color:#ffffff; text-align:center; font-weight:bold; margin:0; padding:0; text-transform:uppercase; letter-spacing:2px ">
+                           <?php echo $this->restaurant_address;?>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td align="center" height="24" style="line-height:1px; font-size:0">&nbsp;</td>
+                  </tr>
+                  <tr>
+                     <td align="center">
+                        <span style="display: inline-block; width: auto; overflow: hidden; width: 100%; max-width: 275px;">
+                        <?php if(!empty($this->facebook_url)){?>
+                        <a href="<?php echo $this->facebook_url;?>" target="_blank" style="display: inline-block; outline:none">
+                        <img src="<?php echo TEMPLATE_IMG_PATH; ?>i_fb.png" alt="Facebook" width="11" height="24" border="0">
+                        </a>
+                        <?php }?>
+                            <?php if(!empty($this->twitter_url)){?>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="<?php echo $this->twitter_url;?>" style="display: inline-block; outline:none">
+                        <img src="<?php echo TEMPLATE_IMG_PATH; ?>i_twtr.png" alt="Twitter" width="20" height="24" border="0">
+                       <?php } ?>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <?php if(!empty($this->instagram_url)){?>
+                        <a href="<?php echo $this->instagram_url;?>" target="_blank" style="display: inline-block; outline:none">
+                        <img src="<?php echo TEMPLATE_IMG_PATH; ?>inst.png" alt="Instagram" width="20" height="24" border="0">
+                        </a>
+                        <?php } ?>
+                        </span>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td height="18"  style="line-height:1px; font-size:0">&nbsp;</td>
+         </tr>
+      </table>
+   </td>
+</tr>
+<!-- end of footer -->

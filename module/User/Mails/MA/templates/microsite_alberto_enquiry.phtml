@@ -1,0 +1,140 @@
+<tr>
+    <td align="center" style="color:#ffffff;background:#000000;font-size:16px;" height="96" valign="middle">
+        <?php if (isset($this->restaurant_logo) && !empty($this->restaurant_logo)) { ?>
+            <img src="<?php echo IMAGE_PATH.$this->rest_code.'/'.$this->restaurant_logo; ?>" alt="<?php echo strtolower($this->restaurant_name); ?>" style="max-width:71px; width:100%;display:block">
+        <?php
+        } else {
+            echo ucwords($this->restaurant_name);
+        }
+        ?>
+    </td>
+</tr><!-- end of header -->   
+
+
+<tr>
+    <td bgcolor="#ffffff" align="left" valign="top">
+        <table bgcolor="#ffffff" align="left" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 510px;">
+            <tr>
+                <td align="center" bgcolor="#ffffff" align="left" valign="top" style="padding-left:20px;padding-right:20px;">
+                    
+                    <table bgcolor="#ffffff" align="left" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 510px;">
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;padding-top:20px;line-height:24px;padding-bottom:9px;color:#333333;text-align:left;font-weight:bold;">
+                                Name
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;padding-bottom:19px;color:#333333;text-align:left"><?php echo $this->name; ?></td>
+                        </tr>
+                        
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;padding-top:20px;line-height:24px;padding-bottom:9px;color:#333333;text-align:left;font-weight:bold;">
+                                Phone
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;padding-bottom:19px;color:#333333;text-align:left"><?php echo $this->phone; ?></td>
+                        </tr>
+                        
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;padding-top:20px;line-height:24px;padding-bottom:9px;color:#333333;text-align:left;font-weight:bold;">
+                                Email
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;padding-bottom:19px;color:#333333;text-align:left"><?php echo $this->email; ?></td>
+                        </tr>
+                        
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;padding-top:20px;line-height:24px;padding-bottom:9px;color:#333333;text-align:left;font-weight:bold;">
+                                BEST TIME TO REACH
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;padding-bottom:50px;color:#333333;text-align:left"><?php echo $this->best_time; ?></td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;padding-top:20px;line-height:24px;padding-bottom:9px;color:#333333;text-align:left;font-weight:bold;">
+                                BEST WAY TO REACH
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;padding-bottom:50px;color:#333333;text-align:left"><?php echo $this->best_way; ?></td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;padding-top:20px;line-height:24px;padding-bottom:9px;color:#333333;text-align:left;font-weight:bold;">
+                                DESCRIBE YOUR EVENT
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;padding-bottom:50px;color:#333333;text-align:left"><?php echo $this->describe_event; ?></td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;padding-top:20px;line-height:24px;padding-bottom:9px;color:#333333;text-align:left;font-weight:bold;">
+                                WHAT KIND OF FOOD ARE YOU LOOKING FOR?
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;padding-bottom:50px;color:#333333;text-align:left"><?php echo $this->food_type; ?></td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;padding-top:20px;line-height:24px;padding-bottom:9px;color:#333333;text-align:left;font-weight:bold;">
+                                DO YOU NEED AN EVENT VENUE?
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial; font-size:18px;line-height:24px;padding-bottom:50px;color:#333333;text-align:left"><?php echo $this->evant_venue; ?></td>
+                        </tr>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#ed1c24" align="center" valign="top" style="padding-left:20px;padding-right:20px;" height="40px" >
+                    <table bgcolor="#ed1c24" align="center" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 510px;">
+                        
+                            <td align="center" >
+                                <table align="center" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 510px;">
+                                    <tr>
+                                        <td align="center" style="text-decoration:none !important; color:#ffffff !important;">
+                                            <p style="font-family:arial; font-size:12px;line-height:16px; color:#ffffff; text-align:center; font-weight:bold; margin:0; padding:0; text-transform:uppercase; letter-spacing:2px; text-decoration:none !important; text-decoration:none; color:#ffffff; color:#ffffff !important;">
+                                                <?php echo $this->restaurant_address; ?>
+                                            </p></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td align="center" height="24" style="line-height:1px; font-size:0">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <span style="display: inline-block; width: auto; overflow: hidden; width: 100%; max-width: 275px;">
+                                                <?php if(!empty($this->facebook_url)){ ?>
+                                                <a href="<?php echo $this->facebook_url; ?>" target="_blank" style="display: inline-block; outline:none">
+                                                    <img src="<?php echo TEMPLATE_IMG_PATH; ?>i_fb.png" alt="Facebook" width="13" height="24" border="0">
+                                                </a>
+                                                <?php } ?>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <?php if(!empty($this->twitter_url)){ ?>
+                                                <a href="<?php echo $this->twitter_url; ?>" style="display: inline-block; outline:none">
+                                                    <img src="<?php echo TEMPLATE_IMG_PATH; ?>i_twtr.png" alt="Twitter" width="20" height="24" border="0">
+                                                </a>
+                                                <?php } ?>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <?php if(!empty($this->instagram_url)){ ?>
+                                                <a href="<?php echo $this->instagram_url; ?>" target="_blank" style="display: inline-block; outline:none">
+                                                    <img src="<?php echo TEMPLATE_IMG_PATH; ?>inst.png" alt="Instagram" width="23" height="24" border="0">
+                                                </a>
+                                                <?php } ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" height="24" style="line-height:1px; font-size:0">&nbsp;</td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+                        <tr><td height="18"  style="line-height:1px; font-size:0">&nbsp;</td></tr>
+                    </table>
+                </td>
+            </tr><!-- end of footer --> 

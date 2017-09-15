@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html style="width: 100%;">
+    <head>
+        <title>Munch Ado | Dine & More Rewards!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+            @-ms-viewport {width: device-width;}
+            @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+                img[id="dv1"], img[id="dv2"] {display: none !important;}
+            }
+        </style>
+    </head>
+    <body style="margin: 0; padding: 0; font: normal 16px Arial; color:#333333; width: 100%;">
+        <!--[if (gte mso 9)|(IE)]>
+        <table width="550" align="center" cellpadding="0" cellspacing="0" border="0">
+           <tr>
+              <td>
+                 <![endif]-->
+        <table align="center" bgcolor="#fff" width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 550px;">
+            <tr>
+                <td align="center" style="font-size:0">
+                    <a href="<?php echo WEB_HOST_URL; ?>loginRedirect?url=restaurants/<?php echo $this->restnameForHeaderName; ?>/<?php echo $this->restaurantId; ?>/dine-more"> <img src="<?php echo TEMPLATE_IMG_PATH . 'header_dinein.jpg'; ?>" alt="Dine & More Rewards!" style="border: none; width: 100%; max-width: 100%; height: auto;display:block"></a>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#ffffff" align="left" valign="top" style="padding-left:30px;padding-right:30px;">
+                    <table bgcolor="#ffffff" align="left" width="100%" border="0" border-collapse="collapse" cellpadding="0" cellspacing="0" style="width: 100%;max-width: 490px;">
+                        <tr>
+                            <td bgcolor="#ffffff" style="font-family:arial; font-size:18px;padding-top:26px;padding-bottom:10px;line-height:24px; color:#333333;">
+                                Thank you for joining <strong><?php echo $this->modifyRestName;?></strong> Dine & More rewards program powered by Munch Ado! We can&#8217;t wait to share amazing meals and moments with you.<br /><br />Start enjoying Dine & More perks today by reviewing your experience at <strong><?php echo $this->restaurantName;?></strong> in the next 24 hours to earn $5 towards any movie rental on Amazon.com! 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  bgcolor="#ffffff" style="padding-top:8px;" valign="middle" align="center">
+                                <!--[if mso]>
+                                           <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://munchado.com/register" style="height:60px;v-text-anchor:middle;width:460px;" arcsize="9%" stroke="f" fillcolor="#a2cd01">
+                                             <w:anchorlock/>
+                                             <center>
+                                           <![endif]-->
+                                <a href="<?php echo WEB_HOST_URL;?>loginRedirect?url=restaurants/<?php echo $this->restnameForHeaderName; ?>/<?php echo $this->restaurantId;?>/reviews" target="_blank"
+                                   style="background-color:#a2cd01;border-radius:6px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:1.5em;font-weight:normal;padding:13px 0;text-align:center;text-decoration:none;width:100%;max-width:460px;-webkit-text-size-adjust:none;text-transform: uppercase;">Leave a Review, Earn $5*</a>
+                                <!--[if mso]>
+                                    </center>
+                                  </v:roundrect>
+                                <![endif]-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffffff" style="font-family:arial; font-size:18px;padding-top:17px;padding-bottom:8px;line-height:24px; color:#333333;">
+                                Once you have access to your account, you&#8217;ll be able to start earning points and become eligible for <a href="<?php echo WEB_HOST_URL; ?>loginRedirect?url=restaurants/<?php echo $this->restnameForHeaderName; ?>/<?php echo $this->restaurantId; ?>/dine-more" target="_blank" style="text-decoration:none;outline: none; color: #ff8207;">exclusive specials</a> at <strong><?php echo $this->restaurantName;?></strong> and even more flash offers from Munch Ado.<br /><br />
+                                <i><strong>*</strong> Reward made available via email upon completion</i>
+                            </td>
+                        </tr>
